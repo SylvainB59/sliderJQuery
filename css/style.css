@@ -1,0 +1,17 @@
+.slider img{
+    width: 100%;
+}
+
+.miniatures div{
+    width: 100px;
+}
+
+.miniatures img{
+    width: 100%;
+}
+
+/****************************************/
+
+.sandwich, .pizza, .burger{
+    display: none;
+}
