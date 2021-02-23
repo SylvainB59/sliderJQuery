@@ -11,7 +11,14 @@
 }
 
 /****************************************/
-
-.sandwich, .pizza, .burger{
-    display: none;
+.selection{
+	overflow: hidden;
 }
+.choix div{
+	position: relative;
+	left: 150%;
+}
+
+/*.sandwich, .pizza, .burger{
+    display: none;
+}*/

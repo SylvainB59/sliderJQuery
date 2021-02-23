@@ -47,14 +47,36 @@ $(".generer").click(function(){
 //         }
 //     }
 // })
+
+
+function getClassMenu(){
+    return '.'+$('#menu').val().toLowerCase();
+}
+
 $(document).on('change','#menu',function(){
-    console.log('.'+$('#menu').val().toLowerCase())
-    let classMenu ='.'+$('#menu').val().toLowerCase()
-    console.log($(classMenu));
-    $(classMenu).toggleClass(classMenu);
+    $('.choix').each(function(){
+        ($(this).hasClass("d-none"))?true:$(this).addClass("d-none");
+    })
+    
+    $(getClassMenu()).toggleClass("d-none");
+    
+    let i=1;
+    $(getClassMenu()+' div').each(function(){
+        $(this).animate({left:0}, 300*i);
+        i++;
+    })
 });
+
 $('.addMenu').click(function(){
-    console.log($('#quantitee').val())
+    let ingredients="";
+    // if(getClassMenu()=='.sandwich'){
+        $(getClassMenu()+' input:checked').each(function(){
+            ingredients+=$(this).val()+', '
+        })
+    // }else{
+    //     ingredients=$(getClassMenu()+' input:checked').val()
+    // }
+    console.log(1,ingredients)
 })
 
 
